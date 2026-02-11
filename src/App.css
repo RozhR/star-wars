@@ -15,10 +15,10 @@
     text-align: justify;
 }
 
-.Leia-Organa {
+.rounded-bottom-right {
     border-radius: 0 0 2rem 0;
 }
 
-.Obi-Wan-Kenobi {
+.rounded-bottom-left {
     border-radius: 0 0 0 2rem;
 }
