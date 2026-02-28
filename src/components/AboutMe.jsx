@@ -37,15 +37,15 @@ const AboutMe = () => {
     return (
         <>
             {(!!hero) &&
-                <div className='fs-2 lh-lg text-justify ms-5'>
-                    <p><span className='display-3'>name:</span> {hero.name}</p>
-                    <p><span className='display-3'>gender:</span> {hero.gender}</p>
-                    <p><span className='display-3'>birth year:</span> {hero.birth_year}</p>
-                    <p><span className='display-3'>height:</span> {hero.height}</p>
-                    <p><span className='display-3'>mass:</span> {hero.mass}</p>
-                    <p><span className='display-3'>hair color:</span> {hero.hair_color}</p>
-                    <p><span className='display-3'>skin color:</span> {hero.skin_color}</p>
-                    <p><span className='display-3'>eye color:</span> {hero.eye_color}</p>
+                <div className='text-4xl leading-normal text-justify ms-12'>
+                    <p><span className='text-6xl'>name:</span> {hero.name}</p>
+                    <p><span className='text-6xl'>gender:</span> {hero.gender}</p>
+                    <p><span className='text-6xl'>birth year:</span> {hero.birth_year}</p>
+                    <p><span className='text-6xl'>height:</span> {hero.height}</p>
+                    <p><span className='text-6xl'>mass:</span> {hero.mass}</p>
+                    <p><span className='text-6xl'>hair color:</span> {hero.hair_color}</p>
+                    <p><span className='text-6xl'>skin color:</span> {hero.skin_color}</p>
+                    <p><span className='text-6xl'>eye color:</span> {hero.eye_color}</p>
                 </div>
             }
         </>

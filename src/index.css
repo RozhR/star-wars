@@ -10,8 +10,33 @@
     --shadow-hero: 0.6rem 0.6rem 0.6rem gray;
 }
 
-@layer base{
- body{
-     @apply font-poller bg-fixed bg-sky text-main;
- }
+@layer base {
+    body {
+        @apply font-poller bg-fixed bg-sky text-main;
+    }
+
+    label {
+        @apply w-full text-danger;
+    }
+
+    input[type="text"], select, textarea {
+        @apply w-full p-3 border border-gray-300 rounded box-border mt-1.5 mb-4 resize-y;
+    }
+
+    button[type="submit"] {
+        @apply text-white py-3 px-5 rounded-sm cursor-pointer;
+        background-color: #04AA6D;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        @apply rounded-md bg-gray-100 p-5;
+    }
+
+    textarea {
+        @apply h-[200px];
+    }
 }
