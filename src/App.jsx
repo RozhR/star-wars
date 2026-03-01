@@ -3,15 +3,18 @@ import Main from "./components/Main.jsx";
 import Footer from "./components/Footer.jsx";
 import {useState} from "react";
 import {navItems} from "./utils/constants.js";
+import {StarWarsContext} from "./utils/context.js";
 
 function App() {
     const [page, setPage] = useState(navItems[0]);
 
     return (
         <body className={'mx-2'}>
-                <Header changePage={setPage}/>
-                <Main page={page}/>
+        <StarWarsContext value={{page, setPage}}>
+                <Header/>
+                <Main/>
                 <Footer/>
+        </StarWarsContext>
         </body>
     )
 }
