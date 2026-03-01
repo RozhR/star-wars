@@ -1,4 +1,4 @@
-import {base_url, period_month} from "../utils/constants.js";
+import {base_url, hero_info, period_month} from "../utils/constants.js";
 import {useEffect, useState} from "react";
 
 const AboutMe = () => {
@@ -37,15 +37,15 @@ const AboutMe = () => {
     return (
         <>
             {(!!hero) &&
-                <div className='text-4xl leading-normal text-justify ms-12'>
-                    <p><span className='text-6xl'>name:</span> {hero.name}</p>
-                    <p><span className='text-6xl'>gender:</span> {hero.gender}</p>
-                    <p><span className='text-6xl'>birth year:</span> {hero.birth_year}</p>
-                    <p><span className='text-6xl'>height:</span> {hero.height}</p>
-                    <p><span className='text-6xl'>mass:</span> {hero.mass}</p>
-                    <p><span className='text-6xl'>hair color:</span> {hero.hair_color}</p>
-                    <p><span className='text-6xl'>skin color:</span> {hero.skin_color}</p>
-                    <p><span className='text-6xl'>eye color:</span> {hero.eye_color}</p>
+                <div className='text-4xl leading-loose text-justify ms-12'>
+                    {hero_info.map((item) => {
+                        const key = item.toLowerCase().replace(" ", "_");
+                        return (
+                            <p key={key}>
+                                <span className='text-6xl'>{item}:</span> {hero[key]}
+                            </p>
+                        );
+                    })}
                 </div>
             }
         </>
